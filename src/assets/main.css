@@ -1,0 +1,277 @@
+@import './base.css';
+
+
+/*data app*/
+
+/*--------------------
+    Body
+    --------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+h1{
+  color: white;
+  font-weight: bold;
+}
+.menu_{
+  margin: 20px 0;
+}
+.menu_ > a{
+  margin: 0 15px;
+}
+
+.home_{
+  text-align: center;
+}
+
+form{
+  margin: 15px 0;
+}
+form > div{
+  margin-top: 30px;
+}
+form > div label{
+  color: white;
+  font-style: italic;
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
+  font-size: 11px;
+  z-index: 10;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 35px;
+  border-radius: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: #478e94;
+  text-transform: capitalize;
+  border: 3px solid #478e94;
+  background-color: white;
+  transition: 0.25s;
+  margin-top: 20px;
+}
+button:hover{
+  background-color: #478e94;
+  color: white;
+}
+
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  background: radial-gradient(ellipse farthest-corner at bottom, #6beace, #2e9aa4);
+}
+
+/*--------------------
+    App
+    --------------------*/
+input{
+  resize: none;
+  border: none;
+  background: #ffffff;
+  border-radius: 50px;
+  height: 27px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  padding: 0 15px;
+  color: #478e94;
+}
+.main_class{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu_{
+  display: flex;
+  align-items: center;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app h1 {
+  /*position: absolute;
+      top: -34px;
+      left: -2px;*/
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 100;
+  font-size: 27px;
+  opacity: 0.9;
+}
+
+.app .logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
+}
+
+.app time {
+  position: initial;
+  top: -32px;
+  right: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 10.5px;
+  text-align: right;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+}
+
+.app .widget {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.button_admin{
+  margin: 15px 0;
+}
+
+.app .widget li {
+  width: 180px;
+    height: 148px;
+    padding: 40px 10px;
+    margin: 0.5px;
+    /* float: left; */
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 64, 58, 0.15);
+    transition: all 0.3s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+    /* transform-origin: right bottom; */
+    /* transform: scale(0); */
+    margin: 20px;
+}
+.app .widget li:hover{
+  transform: scale(1.25);
+}
+
+
+.app .widget li:nth-child(2) {
+  transform-origin: left bottom;
+  transition-delay: 0.1s;
+}
+
+.app .widget li:nth-child(3) {
+  transform-origin: right top;
+  transition-delay: 0.2s;
+}
+
+.app .widget li:nth-child(4) {
+  transform-origin: left top;
+  transition-delay: 0.3s;
+}
+
+.app .widget li h2 {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.app .widget li .val {
+  font-size: 50px;
+  font-weight: 100;
+  color: #343a42;
+}
+
+.app .widget li .val small {
+  font-size: 30px;
+}
+
+.app .widget li .val small sup {
+  position: relative;
+  top: -12px;
+}
+
+.active .app .widget li {
+  transform: scale(1);
+  transition: all 0.5s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.active .app .widget li:nth-child(2) {
+  transform-origin: left bottom;
+  transition-delay: 0.2s;
+}
+
+.active .app .widget li:nth-child(3) {
+  transform-origin: right top;
+  transition-delay: 0.4s;
+}
+
+.active .app .widget li:nth-child(4) {
+  transform-origin: left top;
+  transition-delay: 0.6s;
+}
+
+.reload {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  z-index: 10;
+  outline: none !important;
+  cursor: pointer;
+  box-shadow: 0 6px 7px rgba(0, 64, 58, 0.27);
+  transition: all 0.1s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.reload:hover {
+  box-shadow: 0 4px 4px rgba(0, 64, 58, 0.27);
+  transform: translateY(1px);
+}
+
+.reload:active {
+  box-shadow: 0 1px 2px rgba(0, 64, 58, 0.27);
+  transform: translateY(2px);
+}
+
+.reload svg {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+li {
+  list-style: none;
+}
+
+.title_ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
